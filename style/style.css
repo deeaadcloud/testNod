@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    background: #C0DBD9;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 0 15px;
+}
+
+.header_box {
+    max-width: 97.5vw;
+    height: 100px;
+    background-color: #7FAFF6;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+
+a.header_btn {
+    border-radius: 5px;
+    width: 210px;
+    height: 39px;
+    background: #A5C7F9;
+    padding: 8px 15px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main {
+    margin-bottom: 100px;
+}
+
+
+.top_main {
+    background: #B3F95A;
+    display: grid;
+    grid-template-columns: 33.33% 1fr 13.675%;
+    grid-gap: 15px;
+    max-width: 1170px;
+    max-height: 411px;
+    margin-bottom: 15px;
+    grid-template-areas:
+        "one  two  three "
+        "four four  five"
+    ;
+}
+
+.one, .two, .three, .four, .five {
+    background-color: #8AD191;
+    height: 198px;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 62px;
+    color: #ffffff;
+}
+
+.one {
+    grid-area: one;
+    max-width: 390px;
+    position: relative;
+}
+
+.one::after {
+    position: absolute;
+    content: '1';
+    top: 35%;
+    left: 45%;
+
+
+}
+
+.two {
+    grid-area: two;
+    max-width: 590px;
+    position: relative;
+}
+
+.two::after {
+    position: absolute;
+    content: '2';
+    top: 35%;
+    left: 45%;
+}
+
+.three {
+    grid-area: three;
+    max-width: 160px;
+    position: relative;
+}
+
+.three::after {
+    position: absolute;
+    content: '3';
+    top: 35%;
+    left: 45%;
+}
+
+.four {
+    grid-area: four;
+    position: relative;
+}
+
+.four::after {
+    position: absolute;
+    content: '4';
+    top: 35%;
+    left: 45%;
+}
+
+.five {
+    grid-area: five;
+    max-width: 160px;
+    position: relative;
+}
+
+.five::after {
+    position: absolute;
+    content: '5';
+    top: 35%;
+    left: 45%;
+    color: #ffffff;
+}
+
+.bottom_main {
+    background: #88B5BF;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.bottom_box {
+    padding-top: 17.928%;
+    padding-left: 22.973%;
+    position: relative;
+    margin-right: 30px;
+}
+
+.bottom_box:nth-child(4) {
+    margin-right: 0;
+}
+
+.bottom_one, .bottom_two, .bottom_three, .bottom_four {
+    background: #0D89B0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom_four {
+    margin-right: 0px;
+}
+
+.footer_container {
+    background: #7FAFF6;
+    max-width: 1170px;
+    height: 100px;
+}
+
+/* popup */
+
+.popup {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hiden;
+    transition: .3s ease-in-out;
+}
+
+.popup_inner {
+    position: relative;
+    top: -100vw;
+    display: flex;
+    align-items: center;
+    max-width: 25rem;
+    max-height: 25rem;
+    width: 60%;
+    height: 100%;
+    background-color: #f2f4f5;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+}
+
+.inner_text {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.inner_text p {
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 62px;
+
+}
+
+.close a {
+    text-decoration: none;
+    color: #47BDFF;
+}
+
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup:target .popup_inner {
+    top: 20%;
+    right: 0;
+    transform: rotate(0);
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 2.688rem;
+    height: 2.438rem;
+    font-size: 20px;
+    line-height: 23px;
+    border-radius: 5px;
+    background: #7FAFF6;
+    z-index: 4;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+@media (max-width:1200px) {
+
+    .main {
+        margin-bottom: 8.333vw;
+    }
+
+    .bottom_box {
+        margin-right: 2.5vw;
+    }
+
+    .one, .two, .three, .four, .five {
+
+        font-size: 4.52vw;
+    }
+
+
+}
+
+@media (max-width:300px) {
+
+    a.header_btn {
+        width: 70vw;
+        font-size: 6.666vw;
+    }
+
+
+}
